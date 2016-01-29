@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SIRV Configurator</title>
+        <title>SIRV Configurator (rotoscoper)</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -14,7 +14,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <h1>SIRV Configurator</h1>
+              <h1>SIRV Configurator (rotoscoper)</h1>
+              <p class="lead">
+                Use this tool to create hotspot coordinates over a series of frames.
+              </p>
+              <p>
+                Enter the URL of your spin file in the form below and fetch. Your complete spin file load in the text area below. Enter your desired configuration values (style and box coordinates) into the appropriate fields. Scroll through each image and click where you want the hotspot to be located. Your hotspot values can be found in the New Config text area. This tool will only handle one hotspot at a time. You you will have to copy out the new config and add it to your file manually.
+              </p>
               <hr>
               <form class="form-inline" id="spinFileForm">
                 <div class="form-group">
@@ -57,5 +63,15 @@
         </div>
 
         <script src="js/min/main-min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73101432-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </body>
 </html>
