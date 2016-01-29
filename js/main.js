@@ -25,13 +25,14 @@ jQuery(document).ready(function($) {
           .attr('src', '//orgeadvi.sirv.com/vanimation/' + v)
           .attr('data-frame', k)
           .appendTo(div)
+          $('<p>').appendTo(div);
         })
 
         $('img').click(function(e) {
           var offset = $(this).offset(),
           x = Math.round((e.pageX - offset.left) / $(this).width() * 100),
           y = Math.round((e.pageY - offset.top) / $(this).height() * 100);
-          $(this).parent().append(x + ", " + y);
+          $(this).parent().find('p').empty().append(x + ", " + y);
           newConfig.frames[$(this).data('frame')] = {
             "pointer": {
               "style": hotSpotStyleForm.val(),
