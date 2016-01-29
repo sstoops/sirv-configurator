@@ -1,0 +1,30 @@
+@import "../bower_components/normalize-css/normalize.css";
+@import "../bower_components/bootstrap/dist/css/bootstrap.css";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600);
+
+@bg-color: #fff;
+@fg-color: #000;
+@spot-color: #E91D0E;
+
+html, body, .container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Source Sans Pro',sans-serif;
+	box-sizing: border-box;
+}
+
+#images {
+	& > div {
+		border: 1px solid grey;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		img {
+			max-width: 100%;
+			border-bottom: 1px solid grey;
+		}
+	}
+}

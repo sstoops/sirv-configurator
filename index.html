@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="theme-color" content="#cd1634"> -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,800' rel='stylesheet' type='text/css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/q.js/1.4.1/q.js"></script>
+    </head>
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1>SIRV image coordinate configurator</h1>
+              <hr>
+              <form class="form-inline" id="spinFileForm">
+                <div class="form-group">
+                  <label for="spinFileInput">Spin File</label>
+                  <input type="text" name="spinFileInput" placeholder="Spin File URL" id="spinFileInput" class="form-control">
+                </div>
+                <input type="submit" name="submit" value="Fetch" class="btn btn-default" id="fetchSpinFile">
+              </form>
+              <hr>
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="hotspotStyle">Hotspot style</label>
+                  <input type="text" name="Hostpot style" value="d1" placeholder="HotSpot Style (d1, d2, d3)" id="hotspotStyle" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="boxXInput">Box X</label>
+                  <input type="text" name="Box X" value="0" id="boxXInput" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="boxXInput">Box Y</label>
+                  <input type="text" name="Box Y" value="0" id="boxYInput" class="form-control">
+                </div>
+                <hr>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="spinFile">Raw Spin File</label>
+                  <textarea name="spinFile" rows="20" class="form-control" id="spinFile"></textarea>
+                  <hr>
+                  <label for="newConfig">New Config</label>
+                  <textarea name="newConfig" rows="8" class="form-control" id="newConfig"></textarea>
+                </div>
+              </form>
+              <hr>
+              <div class="" id="images">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="js/min/main-min.js"></script>
+    </body>
+</html>
