@@ -8,6 +8,8 @@ jQuery(document).ready(function($) {
       boxYForm = $('#boxYInput'),
       newConfigForm = $('#newConfig'),
       scrubber = $('#scrubber'),
+      frameIndexForm = $('#frameIndex'),
+      controlsForm = $('#controlsForm'),
       frames = [],
       imgPrefix = "https://orgeadvi.sirv.com/";
 
@@ -16,9 +18,15 @@ jQuery(document).ready(function($) {
   });
   $('#previousFrameButton').click(previousFrame);
   $('#nextFrameButton').click(nextFrame);
+  controlsForm.on('submit', function(e){
+    e.preventDefault();
+    showFrame(frameIndexForm.val());
+  })
 
   function showFrame(num) {
     imgContainer.empty().append(frames[num - 1]);
+    frameIndexForm.val(num);
+    scrubber.val(num);
   }
 
   function nextFrame(){
