@@ -1,21 +1,11 @@
 @import "../bower_components/bootstrap/dist/css/bootstrap.css";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600);
-html,
-body,
-.container {
-  width: 100%;
-  height: 100%;
-}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
+  padding-bottom: 50px;
 }
-#images > div {
-  border: 1px solid grey;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-#images > div img {
+#image img {
   max-width: 100%;
-  border-bottom: 1px solid grey;
+  border: 1px solid grey;
 }
