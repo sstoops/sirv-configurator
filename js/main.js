@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
       frameIndexForm = $('#frameIndex'),
       controlsForm = $('#controlsForm'),
       frames = [],
-      imgPrefix = "https://orgeadvi.sirv.com/";
+      imgPrefix = "https://";
 
   scrubber.on('input', function(e){
     showFrame($(this).val());
@@ -50,8 +50,8 @@ jQuery(document).ready(function($) {
     var url = $('#spinFileInput').val();
     var parser = document.createElement('a');
     parser.href = url;
-    path = parser.pathname.split('/')
-    imgPrefix = imgPrefix + path.slice(1, path.length - 1).join('/') + '/';
+    path = parser.pathname.split('/');
+    imgPrefix = imgPrefix + parser.host + '/' + path.slice(1, path.length - 1).join('/') + '/';
     $.ajax({
       url: url,
       jsonp: "callback",
@@ -86,8 +86,8 @@ jQuery(document).ready(function($) {
               "y": y + "%"
             },
             "box": {
-              "x": boxXForm.val(),
-              "y": boxYForm.val()
+              "x": parseInt(boxXForm.val()),
+              "y": parseInt(boxYForm.val())
             }
           };
           newConfigForm.val(JSON.stringify(newConfig, null, '\t'));
