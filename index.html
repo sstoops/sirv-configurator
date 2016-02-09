@@ -18,33 +18,48 @@
               <p class="lead">
                 Use this tool to create hotspot coordinates over a series of frames.
               </p>
-              <p>
-                Enter the URL of your spin file in the form below and fetch. Your complete spin file load in the text area below. Enter your desired configuration values (style and box coordinates) into the appropriate fields. Below you'll find the first frame of your sequence. Scrub to your desired frame and click where you want your hotspot. This will automatically move on to the next frame. Repeat until finished. Your hotspot values can be found in the New Config text area. This tool will only handle one hotspot at a time. You you will have to copy out the new config and add it to your file manually.
-              </p>
+
+              <div class="row">
+                <div class="col-xs-6">
+                  <form id="spinFileForm">
+                    <div class="form-group">
+                      <label for="spinFileInput">Spin File</label>
+                      <input type="text" name="spinFileInput" placeholder="Spin File URL" id="spinFileInput" class="form-control">
+                    </div>
+                    <input type="submit" name="submit" value="Fetch" class="btn btn-default" id="fetchSpinFile">
+                  </form>
+                  <hr>
+                  <form>
+                    <div class="form-group">
+                      <label for="hotspotStyle">Hotspot style</label>
+                      <input type="text" name="Hostpot style" value="d1" placeholder="HotSpot Style (d1, d2, d3)" id="hotspotStyle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="boxXInput">Box X</label>
+                      <input type="text" name="Box X" value="0" id="boxXInput" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="boxXInput">Box Y</label>
+                      <input type="text" name="Box Y" value="0" id="boxYInput" class="form-control">
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xs-6">
+                  <p>
+                    Enter the URL of your spin file in the form below and fetch. You can view your complete spin in the text area below. Enter your desired configuration values (style and box coordinates) into the appropriate fields before beginning.
+                  </p>
+                  <p>
+                    Below you'll find the first frame of your sequence. Scrub to your desired frame and click where you want your hotspot. This will automatically progress to the next frame. Repeat until finished. Your hotspot values can be found in the New Config text area.
+                  </p>
+                  <p>
+                    Unfortunately, this tool currently only handles one hotspot at a time. Once you copy out the new config and add it to your file, reload this page and repeat the above steps for your next hotspot.
+                  </p>
+                  <p>
+                    <em>"I trying to create numerous hotspots over a sequence of frames and decided to build this tool to quicken the process. I hope you find it useful!" &mdash;<a href="http://www.seanstoops.com">Sean Stoops.</a></em>
+                  </p>
+                </div>
+              </div>
               <hr>
-              <form class="form-inline" id="spinFileForm">
-                <div class="form-group">
-                  <label for="spinFileInput">Spin File</label>
-                  <input type="text" name="spinFileInput" placeholder="Spin File URL" id="spinFileInput" class="form-control">
-                </div>
-                <input type="submit" name="submit" value="Fetch" class="btn btn-default" id="fetchSpinFile">
-              </form>
-              <hr>
-              <form class="form-inline">
-                <div class="form-group">
-                  <label for="hotspotStyle">Hotspot style</label>
-                  <input type="text" name="Hostpot style" value="d1" placeholder="HotSpot Style (d1, d2, d3)" id="hotspotStyle" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="boxXInput">Box X</label>
-                  <input type="text" name="Box X" value="0" id="boxXInput" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="boxXInput">Box Y</label>
-                  <input type="text" name="Box Y" value="0" id="boxYInput" class="form-control">
-                </div>
-                <hr>
-              </form>
               <form>
                 <div class="form-group">
                   <div class="row">
